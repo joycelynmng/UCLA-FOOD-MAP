@@ -1,0 +1,133 @@
+{
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "Diddy Riese",
+        "Type": "Food",
+        "Category": "American"
+      },
+      "geometry": {
+        "coordinates": [
+          -118.446926,
+          34.063022
+        ],
+        "type": "Point"
+      },
+      "id": "2e3c4a0191944beae968336561521e23"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "Hanoo Kalbi",
+        "Type": "Food",
+        "Category": "Korean"
+      },
+      "geometry": {
+        "coordinates": [
+          -118.536391,
+          34.246628
+        ],
+        "type": "Point"
+      },
+      "id": "3471ac71ef2755daacb97ecc657087c8"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "Louders",
+        "Type": "Food",
+        "Category": "Korean"
+      },
+      "geometry": {
+        "coordinates": [
+          -118.297494,
+          34.063284
+        ],
+        "type": "Point"
+      },
+      "id": "7004eac165428b34969c462dac3f274f"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "Ysabel",
+        "Type": "Food",
+        "Category": "American"
+      },
+      "geometry": {
+        "coordinates": [
+          -118.361711,
+          34.088617
+        ],
+        "type": "Point"
+      },
+      "id": "93a9618f5f203ea2bc3d40b47f0da7dc"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "Sun Nong Dan",
+        "Type": "Food",
+        "Category": "Korean"
+      },
+      "geometry": {
+        "coordinates": [
+          -118.297517,
+          34.06303
+        ],
+        "type": "Point"
+      },
+      "id": "a051e8d4d41ace2c86eec898a1e099ed"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "Cava",
+        "Type": "Food",
+        "Category": "Mediterranean"
+      },
+      "geometry": {
+        "coordinates": [
+          -118.446148,
+          34.061149
+        ],
+        "type": "Point"
+      },
+      "id": "df23c6d286808f68a78ed3561063d8d1"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "Sunright Tea Studio",
+        "Type": "Food",
+        "Category": "Boba"
+      },
+      "geometry": {
+        "coordinates": [
+          -118.440856,
+          34.037983
+        ],
+        "type": "Point"
+      },
+      "id": "e07d0fce48734646cd4d5ceda7a07455"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "Marugame Udon",
+        "Type": "Food",
+        "Category": "Japanese"
+      },
+      "geometry": {
+        "coordinates": [
+          -118.443394,
+          34.040387
+        ],
+        "type": "Point"
+      },
+      "id": "fd2a9a1a74228cac02c9e3c6b277e2b2"
+    }
+  ],
+  "type": "FeatureCollection"
+}
