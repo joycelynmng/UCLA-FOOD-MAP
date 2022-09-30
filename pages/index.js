@@ -1,8 +1,11 @@
 import Head from 'next/head';
-import React, {useState} from "react";
+import React, {useState, useEffect, useCallBack, useRef} from "react";
 import Map, {Marker, Popup} from 'react-map-gl';
 import foodPlaces from "../data/food-places.json";
 import styles from "../styles/Home.module.css";
+import AddPlace from "../Components/AddPlace";
+import Geocoder from 'react-map-gl-geocoder';
+import 'react-map-gl-geocoder/dist/mapbox-gl-geocoder.css'
 
 import 'mapbox-gl/dist/mapbox-gl.css';
 
@@ -12,6 +15,20 @@ export default function Home() {
   
   const [selectedFood, setSelectedFood] = useState(null);
 
+  useEffect(() => {
+    const listener = e => {
+      if (e.key === "Escape") {
+          setSelectedPark(null);
+      }
+    };
+    window.addEventListener("keydown", listener);
+
+    return () => {
+      window.removeEventListener("keydown", listener);
+    };
+  }, []);
+
+
   return (
     <div>
       <Head>
@@ -19,7 +36,7 @@ export default function Home() {
         <title>UCLA Food Places</title>
         <meta name='viewport' content='width=device-width, initial-scale=1' />
       </Head>
-
+      <AddPlace />
       <Map
         initialViewState={{
           latitude: 34.0689,
@@ -31,27 +48,30 @@ export default function Home() {
         mapboxAccessToken={MAPBOX_TOKEN}
       >
         {foodPlaces.features.map(food => (
-          <Marker key={food.id} 
+          <Marker 
+            key={food.id} 
             latitude={food.geometry.coordinates[1]}
             longitude={food.geometry.coordinates[0]}>
-              <button className={styles.markerBtn} onClick={(e) => {
+              <button className={styles.markerBtn} onClick={e => {
                 e.preventDefault();
-                setSelectedFood(food)
-              } }>
+                setSelectedFood(food);
+              }}>
                 <img src="bicycle-24.svg" alt="marker" />
               </button>
-              <div>
-                Food
-              </div>
           </Marker>
         ))}
 
         {selectedFood ? (
           <Popup 
             latitude={selectedFood.geometry.coordinates[1]} 
-            longitude={selectedFood.geometry.coordinates[0]}>
-            <h2>{selectedFood.properties.Name}</h2>
-            <p>{selectedFood.properties.Category}</p>
+            longitude={selectedFood.geometry.coordinates[0]}
+            onClose = {() => {
+              setSelectedFood(null);
+            }}>
+              <div>
+                <h2>{selectedFood.properties.Name}</h2>
+                <p>{selectedFood.properties.Category}</p>
+              </div>
           </Popup>
         ) : null }
       </Map>

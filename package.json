@@ -9,11 +9,15 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "components": "^0.1.0",
     "mapbox-gl": "^2.10.0",
     "next": "12.3.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "react-map-gl": "^7.0.19"
+    "react-map-gl": "^7.0.19",
+    "react-map-gl-geocoder": "^2.2.0",
+    "styled": "^1.0.0",
+    "styled-components": "^5.3.5"
   },
   "devDependencies": {
     "eslint": "8.23.1",
